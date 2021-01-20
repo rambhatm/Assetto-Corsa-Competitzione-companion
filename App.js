@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { DefaultTheme, Provider as PaperProvider, Appbar } from 'react-native-paper'
 
+import League_bar from './components/league_bar.js'
+
 export default function App() {
     return (
         <PaperProvider theme={theme}>
@@ -11,6 +13,7 @@ export default function App() {
                 <Text>Assetto Corsa Competetizione Scheduling app+!</Text>
                 <StatusBar style="auto" />
             </View>
+            <League_bar></League_bar>
         </PaperProvider>
     );
 }
@@ -25,7 +28,7 @@ const styles = StyleSheet.create({
 });
 
 const theme = {
-    //  ...DefaultTheme,
+    ...DefaultTheme,
     dark: true,
     mode: 'exact',
     colors: {
